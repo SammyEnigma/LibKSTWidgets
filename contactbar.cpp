@@ -20,5 +20,9 @@ namespace KSTWidgets
 		layout()->addWidget(new QLabel("Street Name",this));
 		street=new QLineEdit(this);
 		layout()->addWidget(street);
+		layout()->addWidget(new QLabel("Phone Number",this));
+		phone=new QLineEdit(this);
+		phone->setInputMask("(999) 999-9999");
+		layout()->addWidget(phone);
 	}
 }

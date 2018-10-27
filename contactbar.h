@@ -12,5 +12,6 @@ namespace KSTWidgets
 		ContactBar(QWidget *parent=nullptr);
 	protected:
 		QLineEdit *street;
+		QLineEdit *phone;
 	};
 }
