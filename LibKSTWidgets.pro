@@ -6,9 +6,11 @@ TEMPLATE = lib
 DEFINES += LIBKSTWIDGETS_LIBRARY
 
 SOURCES += \
-    identificationbar.cpp
+    identificationbar.cpp \
+    notificationbar.cpp
 
 HEADERS += \
         libkstwidgets_global.h \ 
-    identificationbar.h
+    identificationbar.h \
+    notificationbar.h
 
