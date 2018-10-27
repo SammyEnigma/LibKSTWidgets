@@ -6,7 +6,7 @@
 
 namespace KSTWidgets
 {
-	class LIBKSTWIDGETSSHARED_EXPORT IdentificationBar : public QToolBar
+	class LIBKSTWIDGETSSHARED_EXPORT IdentificationBar : public QFrame
 	{
 	public:
 		IdentificationBar(QWidget *parent=nullptr);
