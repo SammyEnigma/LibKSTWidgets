@@ -11,9 +11,9 @@ namespace KSTWidgets
 	public:
 		IdentificationBar(QWidget *parent=nullptr);
 	protected:
-		QLineEdit firstName;
-		QLineEdit middleName;
-		QLineEdit lastName;
+		QLineEdit *firstName;
+		QLineEdit *middleName;
+		QLineEdit *lastName;
 		void SetSizePolicies();
 	};
 }
