@@ -16,6 +16,7 @@ namespace KSTWidgets
 		layout()->addWidget(username);
 		layout()->addWidget(new QLabel("Password",this));
 		password=new QLineEdit(this);
+		password->setEchoMode(QLineEdit::Password);
 		layout()->addWidget(password);
 		QDialogButtonBox *buttons=new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel,this);
 		connect(buttons,&QDialogButtonBox::accepted,[this]() {
