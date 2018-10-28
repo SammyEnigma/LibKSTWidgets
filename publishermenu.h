@@ -14,5 +14,8 @@ namespace KSTWidgets
 		QAction *logIn;
 	signals:
 		void LogIn();
+	public slots:
+		void DatabaseConnected();
+		void DatabaseDisconnected();
 	};
 }

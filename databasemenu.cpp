@@ -28,11 +28,13 @@ namespace KSTWidgets
 	{
 		connect->setEnabled(false);
 		disconnect->setEnabled(true);
+		configure->setEnabled(false);
 	}
 
 	void DatabaseMenu::Disconnected()
 	{
 		connect->setEnabled(true);
 		disconnect->setEnabled(false);
+		configure->setEnabled(true);
 	}
 }
