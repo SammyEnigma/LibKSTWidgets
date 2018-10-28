@@ -1,8 +1,7 @@
-#include "logindialog.h"
-
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QDialogButtonBox>
+#include "logindialog.h"
 
 namespace KSTWidgets
 {

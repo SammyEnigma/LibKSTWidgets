@@ -12,10 +12,13 @@ namespace KSTWidgets
 		PublisherMenu(QWidget *parent=nullptr);
 	protected:
 		QAction *logIn;
+		QAction *edit;
 	signals:
 		void LogIn();
+		void Edit();
 	public slots:
 		void DatabaseConnected();
 		void DatabaseDisconnected();
+		void PublisherLoaded();
 	};
 }
