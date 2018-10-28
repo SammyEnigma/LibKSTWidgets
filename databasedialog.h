@@ -14,7 +14,6 @@ namespace KSTWidgets
 	public:
 		DatabaseDialog(QWidget *parent=nullptr);
 	protected:
-		QDialogButtonBox *buttons;
 		DatabaseDriverSelect *driver;
 		QLineEdit *sqlitePath;
 		QLineEdit *mysqlUser;

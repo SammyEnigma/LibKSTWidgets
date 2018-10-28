@@ -16,6 +16,7 @@ namespace KSTWidgets
 		QAction *configure;
 	signals:
 		void Connect();
+		void Disconnect();
 		void Configure();
 	public slots:
 		void Configured();

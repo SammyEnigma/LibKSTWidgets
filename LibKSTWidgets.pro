@@ -14,7 +14,9 @@ SOURCES += \
     notestab.cpp \
     databasemenu.cpp \
     databasedialog.cpp \
-    databasedriverselect.cpp
+    databasedriverselect.cpp \
+    publishermenu.cpp \
+    logindialog.cpp
 
 HEADERS += \
         libkstwidgets_global.h \ 
@@ -27,7 +29,9 @@ HEADERS += \
     databasemenu.h \
     databasedialog.h \
     databasedriverselect.h \
-    widgettypes.h
+    widgettypes.h \
+    publishermenu.h \
+    logindialog.h
 
 INCLUDEPATH += ../LibKSTDatabase ../LibKSTLogger ../LibKSTSettings
 LIBS += -L../LibKSTDatabase -L../LibKSTLogger -L../LibKSTSettings -lKSTDatabase -lKSTLogger -lKSTSettings

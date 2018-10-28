@@ -39,7 +39,7 @@ namespace KSTWidgets
 		remoteURL=new QLineEdit(this);
 		remoteURL->setEnabled(false);
 		layout()->addWidget(remoteURL);
-		buttons=new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel,this);
+		QDialogButtonBox *buttons=new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel,this);
 		connect(buttons,&QDialogButtonBox::accepted,[this]() { this->close(); });
 		connect(buttons,&QDialogButtonBox::rejected,[this]() { this->close(); });
 		layout()->addWidget(buttons);

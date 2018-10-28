@@ -8,6 +8,11 @@ namespace KSTWidgets
 		connect=new QAction("&Connect",this);
 		QObject::connect(connect,&QAction::triggered,this,&DatabaseMenu::Connect);
 		addAction(connect);
+		disconnect=new QAction("&Disconnect",this);
+		QObject::connect(disconnect,&QAction::triggered,this,&DatabaseMenu::Disconnect);
+		disconnect->setEnabled(false);
+		addAction(disconnect);
+		addSeparator();
 		configure=new QAction("C&onfigure",this);
 		configure->setEnabled(true);
 		QObject::connect(configure,&QAction::triggered,this,&DatabaseMenu::Configure);
