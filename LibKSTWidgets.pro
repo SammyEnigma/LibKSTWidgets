@@ -11,7 +11,10 @@ SOURCES += \
     recordview.cpp \
     recordcontent.cpp \
     contactbar.cpp \
-    notestab.cpp
+    notestab.cpp \
+    databasemenu.cpp \
+    databasedialog.cpp \
+    databasedriverselect.cpp
 
 HEADERS += \
         libkstwidgets_global.h \ 
@@ -20,5 +23,11 @@ HEADERS += \
     recordview.h \
     recordcontent.h \
     contactbar.h \
-    notestab.h
+    notestab.h \
+    databasemenu.h \
+    databasedialog.h \
+    databasedriverselect.h \
+    widgettypes.h
 
+INCLUDEPATH += ../LibKSTDatabase ../LibKSTSettings
+LIBS += -L../LibKSTDatabase -L../LibKSTSettings -lKSTDatabase -lKSTSettings

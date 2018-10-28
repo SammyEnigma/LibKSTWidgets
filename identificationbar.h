@@ -2,6 +2,7 @@
 
 #include <QToolBar>
 #include <QLineEdit>
+#include <QComboBox>
 #include "libkstwidgets_global.h"
 
 namespace KSTWidgets
@@ -14,6 +15,7 @@ namespace KSTWidgets
 		QLineEdit *firstName;
 		QLineEdit *middleName;
 		QLineEdit *lastName;
+		QComboBox *listing;
 		void SetSizePolicies();
 	};
 }
