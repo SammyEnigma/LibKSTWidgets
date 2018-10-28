@@ -13,6 +13,7 @@ namespace KSTWidgets
 		QAction *connect;
 		QAction *disconnect;
 		QAction *configure;
+		void ValidateConnect();
 	public slots:
 		void Configured();
 		void Connected();
