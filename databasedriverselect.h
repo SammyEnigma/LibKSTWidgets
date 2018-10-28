@@ -2,7 +2,7 @@
 
 #include <QFrame>
 #include <QRadioButton>
-#include "database.h"
+#include "databasetypes.h"
 
 namespace KSTWidgets
 {
@@ -17,7 +17,9 @@ namespace KSTWidgets
 		QRadioButton *remote;
 		void showEvent(QShowEvent *event);
 	signals:
-		void DriverChanged(KSTDatabase::Driver driver);
+		void SQLiteSelected();
+		void MySQLSelected();
+		void RemoteSelected();
 	protected slots:
 		void SQLiteTriggered(bool checked);
 		void MySQLTriggered(bool checked);

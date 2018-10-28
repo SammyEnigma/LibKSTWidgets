@@ -15,7 +15,9 @@ namespace KSTWidgets
 		layout()->setAlignment(Qt::AlignTop);
 		layout()->addWidget(Label("Database Driver"));
 		driver=new DatabaseDriverSelect(this);
-		connect(driver,&DatabaseDriverSelect::DriverChanged,this,&DatabaseDialog::DriverChanged);
+		connect(driver,&DatabaseDriverSelect::SQLiteSelected,this,&DatabaseDialog::SQLiteSelected);
+		connect(driver,&DatabaseDriverSelect::MySQLSelected,this,&DatabaseDialog::MySQLSelected);
+		connect(driver,&DatabaseDriverSelect::RemoteSelected,this,&DatabaseDialog::RemoteSelected);
 		layout()->addWidget(driver);
 		layout()->addWidget(Label("SQLite"));
 		layout()->addWidget(new QLabel("File Path",this));
@@ -53,30 +55,27 @@ namespace KSTWidgets
 		return label;
 	}
 
-	void DatabaseDialog::DriverChanged(KSTDatabase::Driver driver)
+	void DatabaseDialog::SQLiteSelected()
 	{
-		switch (driver)
-		{
-		case KSTDatabase::Driver::SQLITE:
-			sqlitePath->setEnabled(true);
-			mysqlUser->setEnabled(false);
-			mysqlPass->setEnabled(false);
-			remoteURL->setEnabled(false);
-			break;
-		case KSTDatabase::Driver::MYSQL:
-			sqlitePath->setEnabled(false);
-			mysqlUser->setEnabled(true);
-			mysqlPass->setEnabled(true);
-			remoteURL->setEnabled(false);
-			break;
-		case KSTDatabase::Driver::REMOTE:
-			sqlitePath->setEnabled(false);
-			mysqlUser->setEnabled(false);
-			mysqlPass->setEnabled(false);
-			remoteURL->setEnabled(true);
-			break;
-		default:
-			throw std::runtime_error("Unrecognized database driver is configured");
-		}
+		sqlitePath->setEnabled(true);
+		mysqlUser->setEnabled(false);
+		mysqlPass->setEnabled(false);
+		remoteURL->setEnabled(false);
+	}
+
+	void DatabaseDialog::MySQLSelected()
+	{
+		sqlitePath->setEnabled(false);
+		mysqlUser->setEnabled(true);
+		mysqlPass->setEnabled(true);
+		remoteURL->setEnabled(false);
+	}
+
+	void DatabaseDialog::RemoteSelected()
+	{
+		sqlitePath->setEnabled(false);
+		mysqlUser->setEnabled(false);
+		mysqlPass->setEnabled(false);
+		remoteURL->setEnabled(true);
 	}
 }

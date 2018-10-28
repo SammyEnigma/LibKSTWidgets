@@ -22,6 +22,8 @@ namespace KSTWidgets
 		QLineEdit *remoteURL;
 		QLabel* Label(QString text);
 	protected slots:
-		void DriverChanged(KSTDatabase::Driver driver);
+		void SQLiteSelected();
+		void MySQLSelected();
+		void RemoteSelected();
 	};
 }

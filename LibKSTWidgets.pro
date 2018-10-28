@@ -1,4 +1,4 @@
-QT += widgets
+QT += widgets sql
 
 TARGET = KSTWidgets
 TEMPLATE = lib
@@ -29,5 +29,5 @@ HEADERS += \
     databasedriverselect.h \
     widgettypes.h
 
-INCLUDEPATH += ../LibKSTDatabase ../LibKSTSettings
-LIBS += -L../LibKSTDatabase -L../LibKSTSettings -lKSTDatabase -lKSTSettings
+INCLUDEPATH += ../LibKSTDatabase ../LibKSTLogger ../LibKSTSettings
+LIBS += -L../LibKSTDatabase -L../LibKSTLogger -L../LibKSTSettings -lKSTDatabase -lKSTLogger -lKSTSettings

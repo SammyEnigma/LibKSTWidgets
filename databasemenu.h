@@ -7,13 +7,16 @@ namespace KSTWidgets
 {
 	class DatabaseMenu : public QMenu
 	{
+		Q_OBJECT
 	public:
 		DatabaseMenu(QWidget *parent=nullptr);
 	protected:
 		QAction *connect;
 		QAction *disconnect;
 		QAction *configure;
-		void ValidateConnect();
+	signals:
+		void Connect();
+		void Configure();
 	public slots:
 		void Configured();
 		void Connected();

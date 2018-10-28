@@ -1,5 +1,4 @@
 #include "databasemenu.h"
-#include "databasedialog.h"
 #include "localsqlite.h"
 
 namespace KSTWidgets
@@ -7,29 +6,12 @@ namespace KSTWidgets
 	DatabaseMenu::DatabaseMenu(QWidget *parent) : QMenu("&Database",parent)
 	{
 		connect=new QAction("&Connect",this);
-		ValidateConnect();
+		QObject::connect(connect,&QAction::triggered,this,&DatabaseMenu::Connect);
 		addAction(connect);
 		configure=new QAction("C&onfigure",this);
 		configure->setEnabled(true);
-		QObject::connect(configure,&QAction::triggered,[this](bool checked) { (new DatabaseDialog(this))->show(); });
+		QObject::connect(configure,&QAction::triggered,this,&DatabaseMenu::Configure);
 		addAction(configure);
-	}
-
-	void DatabaseMenu::ValidateConnect()
-	{
-		switch (KSTDatabase::Database::ConfiguredDriver())
-		{
-		case KSTDatabase::Driver::SQLITE:
-			if (KSTDatabase::LocalSQLite().ValidateConfiguration())
-				connect->setEnabled(true);
-			else
-				connect->setEnabled(false);
-			break;
-		case KSTDatabase::Driver::MYSQL:
-			break;
-		case KSTDatabase::Driver::REMOTE:
-			break;
-		}
 	}
 
 	void DatabaseMenu::Configured()

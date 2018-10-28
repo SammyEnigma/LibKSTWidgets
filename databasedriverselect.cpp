@@ -1,5 +1,6 @@
 #include <QHBoxLayout>
 #include "databasedriverselect.h"
+#include "database.h"
 
 namespace KSTWidgets
 {
@@ -43,16 +44,16 @@ namespace KSTWidgets
 
 	void DatabaseDriverSelect::SQLiteTriggered(bool checked)
 	{
-		if (checked) emit DriverChanged(KSTDatabase::Driver::SQLITE);
+		if (checked) emit SQLiteSelected();
 	}
 
 	void DatabaseDriverSelect::MySQLTriggered(bool checked)
 	{
-		if (checked) emit DriverChanged(KSTDatabase::Driver::MYSQL);
+		if (checked) emit MySQLSelected();
 	}
 
 	void DatabaseDriverSelect::RemoteTriggered(bool checked)
 	{
-		if (checked) emit DriverChanged(KSTDatabase::Driver::REMOTE);
+		if (checked) emit RemoteSelected();
 	}
 }
