@@ -42,6 +42,11 @@ namespace KSTWidgets
 
 	void IdentificationBar::AddHouseholder()
 	{
+		emit Create(firstName->text(),middleName->text(),lastName->text());
+	}
+
+	void IdentificationBar::EditHouseholder()
+	{
 
 	}
 
@@ -49,5 +54,7 @@ namespace KSTWidgets
 	{
 		if (listing->New())
 			AddHouseholder();
+		else
+			EditHouseholder();
 	}
 }

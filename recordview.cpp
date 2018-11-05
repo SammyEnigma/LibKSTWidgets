@@ -29,7 +29,9 @@ namespace KSTWidgets
 		content->setLayout(new QGridLayout(content));
 		layout()->addWidget(content);
 
-		((QGridLayout*)content->layout())->addWidget(new IdentificationBar(content),0,0,1,2);
+		identificationBar=new IdentificationBar(content);
+		connect(identificationBar,&IdentificationBar::Create,this,&RecordView::CreateHouseholder);
+		((QGridLayout*)content->layout())->addWidget(identificationBar,0,0,1,2);
 		((QGridLayout*)content->layout())->addWidget(new RecordContent(content),1,0,1,1);
 		((QGridLayout*)content->layout())->addWidget(new ContactBar(content),1,1,1,1);
 	}

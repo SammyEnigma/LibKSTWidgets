@@ -4,6 +4,7 @@
 #include <QLabel>
 #include <QComboBox>
 #include "record.h"
+#include "identificationbar.h"
 
 namespace KSTWidgets
 {
@@ -18,6 +19,9 @@ namespace KSTWidgets
 		QFrame *content;
 		QLabel *record;
 		QComboBox *listing;
+		IdentificationBar *identificationBar;
+	signals:
+		void CreateHouseholder(QString firstName,QString middleName,QString lastName);
 	public slots:
 		void Update(std::vector<KSTEntities::Record> records);
 	};

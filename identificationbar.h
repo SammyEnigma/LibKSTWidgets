@@ -9,6 +9,7 @@ namespace KSTWidgets
 {
 	class LIBKSTWIDGETSSHARED_EXPORT IdentificationBar : public QFrame
 	{
+		Q_OBJECT
 	public:
 		IdentificationBar(QWidget *parent=nullptr);
 	protected:
@@ -18,6 +19,9 @@ namespace KSTWidgets
 		AttachmentBox *listing;
 		void SetSizePolicies();
 		void AddHouseholder();
+		void EditHouseholder();
+	signals:
+		void Create(QString firstName,QString middleName,QString lastName);
 	protected slots:
 		void Edits();
 	};
