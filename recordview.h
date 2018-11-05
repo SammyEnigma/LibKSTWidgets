@@ -1,6 +1,9 @@
 #pragma once
 
 #include <QFrame>
+#include <QLabel>
+#include <QComboBox>
+#include "record.h"
 
 namespace KSTWidgets
 {
@@ -11,7 +14,11 @@ namespace KSTWidgets
 		RecordView(QWidget *parent=nullptr);
 		QWidget* Content() const { return content; }
 	protected:
-		QWidget *title;
-		QWidget *content;
+		QFrame *details;
+		QFrame *content;
+		QLabel *record;
+		QComboBox *listing;
+	public slots:
+		void Update(std::vector<KSTEntities::Record> records);
 	};
 }

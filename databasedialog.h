@@ -3,12 +3,12 @@
 #include <QDialog>
 #include <QLabel>
 #include <QLineEdit>
-#include <QDialogButtonBox>
 #include "databasedriverselect.h"
+#include "dialog.h"
 
 namespace KSTWidgets
 {
-	class DatabaseDialog : public QDialog
+	class DatabaseDialog : public Dialog
 	{
 		Q_OBJECT
 	public:
@@ -19,7 +19,6 @@ namespace KSTWidgets
 		QLineEdit *mysqlUser;
 		QLineEdit *mysqlPass;
 		QLineEdit *remoteURL;
-		QLabel* Label(QString text);
 	protected slots:
 		void SQLiteSelected();
 		void MySQLSelected();

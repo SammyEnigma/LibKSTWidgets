@@ -2,8 +2,8 @@
 
 #include <QToolBar>
 #include <QLineEdit>
-#include <QComboBox>
 #include "libkstwidgets_global.h"
+#include "attachmentbox.h"
 
 namespace KSTWidgets
 {
@@ -15,7 +15,10 @@ namespace KSTWidgets
 		QLineEdit *firstName;
 		QLineEdit *middleName;
 		QLineEdit *lastName;
-		QComboBox *listing;
+		AttachmentBox *listing;
 		void SetSizePolicies();
+		void AddHouseholder();
+	protected slots:
+		void Edits();
 	};
 }

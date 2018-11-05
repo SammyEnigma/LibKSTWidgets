@@ -17,7 +17,11 @@ SOURCES += \
     databasedriverselect.cpp \
     publishermenu.cpp \
     logindialog.cpp \
-    publisherdialog.cpp
+    publisherdialog.cpp \
+    attachmentbox.cpp \
+    recordmenu.cpp \
+    recorddialog.cpp \
+    dialog.cpp
 
 HEADERS += \
         libkstwidgets_global.h \ 
@@ -33,7 +37,11 @@ HEADERS += \
     widgettypes.h \
     publishermenu.h \
     logindialog.h \
-    publisherdialog.h
+    publisherdialog.h \
+    attachmentbox.h \
+    recordmenu.h \
+    recorddialog.h \
+    dialog.h
 
 INCLUDEPATH += ../LibKSTEntities ../LibKSTDatabase ../LibKSTLogger ../LibKSTSettings
 LIBS += -L../LibKSTEntities -L../LibKSTDatabase -L../LibKSTLogger -L../LibKSTSettings -lKSTEntities -lKSTDatabase -lKSTLogger -lKSTSettings

@@ -1,13 +1,14 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QStringBuilder>
+#include <QDialogButtonBox>
 #include "databasedialog.h"
 #include "widgettypes.h"
 #include "localsqlite.h"
 
 namespace KSTWidgets
 {
-	DatabaseDialog::DatabaseDialog(QWidget *parent) : QDialog(parent)
+	DatabaseDialog::DatabaseDialog(QWidget *parent) : Dialog(parent)
 	{
 		setModal(true);
 		setWindowTitle("Database Configuration");
@@ -43,16 +44,6 @@ namespace KSTWidgets
 		connect(buttons,&QDialogButtonBox::accepted,[this]() { this->close(); });
 		connect(buttons,&QDialogButtonBox::rejected,[this]() { this->close(); });
 		layout()->addWidget(buttons);
-	}
-
-	QLabel* DatabaseDialog::Label(QString text)
-	{
-		QLabel *label=new QLabel(this);
-		label->setSizePolicy(QSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Maximum));
-		label->setText(text);
-		label->setStyleSheet("font-weight: bold; color: white; background-color: " % COLOR_SLATE_BLUE % "; padding: 0em 0.5em 0em 0.5em;");
-		label->setAlignment(Qt::AlignCenter);
-		return label;
 	}
 
 	void DatabaseDialog::SQLiteSelected()

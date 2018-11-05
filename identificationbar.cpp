@@ -23,7 +23,11 @@ namespace KSTWidgets
 		layout()->addWidget(new QLabel("Last Name"));
 		lastName=new QLineEdit(this);
 		layout()->addWidget(lastName);
+		listing=new AttachmentBox(this);
+		layout()->addWidget(listing);
 		SetSizePolicies();
+
+		connect(firstName,&QLineEdit::editingFinished,this,&IdentificationBar::Edits);
 	}
 
 	void IdentificationBar::SetSizePolicies()
@@ -34,5 +38,16 @@ namespace KSTWidgets
 		lastName->setSizePolicy(policy);
 		policy.setHorizontalStretch(1);
 		middleName->setSizePolicy(policy);
+	}
+
+	void IdentificationBar::AddHouseholder()
+	{
+
+	}
+
+	void IdentificationBar::Edits()
+	{
+		if (listing->New())
+			AddHouseholder();
 	}
 }
