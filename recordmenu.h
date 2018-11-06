@@ -12,8 +12,10 @@ namespace KSTWidgets
 		RecordMenu(QWidget *parent=nullptr);
 	protected:
 		QAction *create;
+		QAction *open;
 	signals:
 		void Create();
+		void Open();
 	public slots:
 		void Enable();
 	};

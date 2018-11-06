@@ -21,7 +21,8 @@ SOURCES += \
     attachmentbox.cpp \
     recordmenu.cpp \
     recorddialog.cpp \
-    dialog.cpp
+    dialog.cpp \
+    selectdialog.cpp
 
 HEADERS += \
         libkstwidgets_global.h \ 
@@ -41,7 +42,8 @@ HEADERS += \
     attachmentbox.h \
     recordmenu.h \
     recorddialog.h \
-    dialog.h
+    dialog.h \
+    selectdialog.h
 
 INCLUDEPATH += ../LibKSTEntities ../LibKSTDatabase ../LibKSTLogger ../LibKSTSettings
 LIBS += -L../LibKSTEntities -L../LibKSTDatabase -L../LibKSTLogger -L../LibKSTSettings -lKSTEntities -lKSTDatabase -lKSTLogger -lKSTSettings

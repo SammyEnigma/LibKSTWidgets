@@ -8,6 +8,9 @@ namespace KSTWidgets
 		create=new QAction("&Create",this);
 		connect(create,&QAction::triggered,this,&RecordMenu::Create);
 		addAction(create);
+		open=new QAction("&Open",this);
+		connect(open,&QAction::triggered,this,&RecordMenu::Open);
+		addAction(open);
 	}
 
 	void RecordMenu::Enable()

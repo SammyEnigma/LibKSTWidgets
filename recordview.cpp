@@ -39,6 +39,7 @@ namespace KSTWidgets
 	void RecordView::Update(std::vector<KSTEntities::Record> records)
 	{
 		record->setText(records.at(0).Name());
+		listing->clear();
 		for (const KSTEntities::Record& record : records)
 		{
 			listing->addItem("Temp",record.ID());
