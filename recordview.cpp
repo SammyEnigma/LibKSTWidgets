@@ -3,6 +3,7 @@
 #include <QGridLayout>
 #include <QLabel>
 #include <QComboBox>
+#include <QStringBuilder>
 #include "recordview.h"
 #include "recordcontent.h"
 #include "identificationbar.h"
@@ -38,11 +39,11 @@ namespace KSTWidgets
 
 	void RecordView::Update(std::vector<KSTEntities::Record> records)
 	{
-		record->setText(records.at(0).Name());
+		record->setText("<b>" % records.at(0).Name() % "</b>");
 		listing->clear();
 		for (const KSTEntities::Record& record : records)
 		{
-			listing->addItem("Temp",record.ID());
+			listing->addItem(record.Identity().FullName(),record.ID());
 		}
 	}
 }

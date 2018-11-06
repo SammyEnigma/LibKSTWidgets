@@ -28,6 +28,7 @@ namespace KSTWidgets
 		SetSizePolicies();
 
 		connect(firstName,&QLineEdit::editingFinished,this,&IdentificationBar::Edits);
+		connect(lastName,&QLineEdit::editingFinished,this,&IdentificationBar::Edits);
 	}
 
 	void IdentificationBar::SetSizePolicies()
@@ -42,7 +43,7 @@ namespace KSTWidgets
 
 	void IdentificationBar::AddHouseholder()
 	{
-		emit Create(firstName->text(),middleName->text(),lastName->text());
+		if (!firstName->text().isEmpty() || !lastName->text().isEmpty()) emit Create(firstName->text(),middleName->text(),lastName->text());
 	}
 
 	void IdentificationBar::EditHouseholder()
