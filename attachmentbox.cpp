@@ -1,13 +1,16 @@
 #include "attachmentbox.h"
 
-const QString AttachmentBox::newItemText="New...";
-
-AttachmentBox::AttachmentBox(QWidget *parent)
+namespace KSTWidgets
 {
-	addItem(newItemText);
-}
+	const QString AttachmentBox::newItemText="New...";
 
-bool AttachmentBox::New() const
-{
-	return currentText() == newItemText;
+	AttachmentBox::AttachmentBox(QWidget *parent) : QComboBox(parent)
+	{
+		addItem(newItemText);
+	}
+
+	bool AttachmentBox::New() const
+	{
+		return currentText() == newItemText;
+	}
 }
