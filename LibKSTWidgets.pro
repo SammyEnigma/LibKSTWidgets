@@ -47,3 +47,8 @@ HEADERS += \
 
 INCLUDEPATH += ../LibKSTEntities ../LibKSTDatabase ../LibKSTLogger ../LibKSTSettings
 LIBS += -L../LibKSTEntities -L../LibKSTDatabase -L../LibKSTLogger -L../LibKSTSettings -lKSTEntities -lKSTDatabase -lKSTLogger -lKSTSettings
+
+win32 {
+	CONFIG += skip_target_version_ext
+	CONFIG -= debug_and_release debug_and_release_target
+}
