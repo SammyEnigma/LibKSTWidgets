@@ -2,7 +2,7 @@
 
 namespace KSTWidgets
 {
-	const QString AttachmentBox::newItemText="New...";
+	const QString AttachmentBox::newItemText="<New...>";
 
 	AttachmentBox::AttachmentBox(QWidget *parent) : QComboBox(parent)
 	{
