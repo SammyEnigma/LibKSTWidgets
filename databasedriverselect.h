@@ -2,11 +2,12 @@
 
 #include <QFrame>
 #include <QRadioButton>
+#include "libkstwidgets_global.h"
 #include "databasetypes.h"
 
 namespace KSTWidgets
 {
-	class DatabaseDriverSelect : public QFrame
+	class LIBKSTWIDGETSSHARED_EXPORT DatabaseDriverSelect : public QFrame
 	{
 		Q_OBJECT
 	public:

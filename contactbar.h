@@ -2,10 +2,11 @@
 
 #include <QFrame>
 #include <QLineEdit>
+#include "libkstwidgets_global.h"
 
 namespace KSTWidgets
 {
-	class ContactBar : public QFrame
+	class LIBKSTWIDGETSSHARED_EXPORT ContactBar : public QFrame
 	{
 		Q_OBJECT
 	public:

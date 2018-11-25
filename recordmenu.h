@@ -2,10 +2,11 @@
 
 #include <QMenu>
 #include <QAction>
+#include "libkstwidgets_global.h"
 
 namespace KSTWidgets
 {
-	class RecordMenu : public QMenu
+	class LIBKSTWIDGETSSHARED_EXPORT RecordMenu : public QMenu
 	{
 		Q_OBJECT
 	public:

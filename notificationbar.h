@@ -4,10 +4,11 @@
 #include <QStatusBar>
 #include <QLabel>
 #include <QSizeGrip>
+#include "libkstwidgets_global.h"
 
 namespace KSTWidgets
 {
-	class NotificationBar : public QStatusBar
+	class LIBKSTWIDGETSSHARED_EXPORT NotificationBar : public QStatusBar
 	{
 		Q_OBJECT
 	public:

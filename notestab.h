@@ -2,10 +2,11 @@
 
 #include <QFrame>
 #include <QPlainTextEdit>
+#include "libkstwidgets_global.h"
 
 namespace KSTWidgets
 {
-	class NotesTab : public QFrame
+	class LIBKSTWIDGETSSHARED_EXPORT NotesTab : public QFrame
 	{
 	public:
 		NotesTab(QWidget *parent=nullptr);

@@ -1,11 +1,12 @@
 #pragma once
 
 #include <QTabWidget>
+#include "libkstwidgets_global.h"
 #include "notestab.h"
 
 namespace KSTWidgets
 {
-	class RecordContent : public QTabWidget
+	class LIBKSTWIDGETSSHARED_EXPORT RecordContent : public QTabWidget
 	{
 		Q_OBJECT
 	public:

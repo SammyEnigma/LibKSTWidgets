@@ -3,12 +3,13 @@
 #include <QFrame>
 #include <QLabel>
 #include <QComboBox>
+#include "libkstwidgets_global.h"
 #include "record.h"
 #include "identificationbar.h"
 
 namespace KSTWidgets
 {
-	class RecordView : public QFrame
+	class LIBKSTWIDGETSSHARED_EXPORT RecordView : public QFrame
 	{
 		Q_OBJECT
 	public:

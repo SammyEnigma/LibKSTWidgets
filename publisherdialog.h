@@ -3,11 +3,12 @@
 #include <QDialog>
 #include <QLineEdit>
 #include <QComboBox>
+#include "libkstwidgets_global.h"
 #include "publisher.h"
 
 namespace KSTWidgets
 {
-	class PublisherDialog : public QDialog
+	class LIBKSTWIDGETSSHARED_EXPORT PublisherDialog : public QDialog
 	{
 	public:
 		PublisherDialog(QWidget *parent=nullptr);

@@ -2,10 +2,11 @@
 
 #include <QDialog>
 #include <QListWidget>
+#include "libkstwidgets_global.h"
 
 namespace KSTWidgets
 {
-	class SelectDialog : public QDialog
+	class LIBKSTWIDGETSSHARED_EXPORT SelectDialog : public QDialog
 	{
 		Q_OBJECT
 	public:

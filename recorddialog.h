@@ -2,11 +2,12 @@
 
 #include <QDialog>
 #include <QLineEdit>
+#include "libkstwidgets_global.h"
 #include "dialog.h"
 
 namespace KSTWidgets
 {
-	class RecordDialog : public Dialog
+	class LIBKSTWIDGETSSHARED_EXPORT RecordDialog : public Dialog
 	{
 		Q_OBJECT
 	public:

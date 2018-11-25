@@ -3,12 +3,13 @@
 #include <QDialog>
 #include <QLabel>
 #include <QLineEdit>
+#include "libkstwidgets_global.h"
 #include "databasedriverselect.h"
 #include "dialog.h"
 
 namespace KSTWidgets
 {
-	class DatabaseDialog : public Dialog
+	class LIBKSTWIDGETSSHARED_EXPORT DatabaseDialog : public Dialog
 	{
 		Q_OBJECT
 	public:
