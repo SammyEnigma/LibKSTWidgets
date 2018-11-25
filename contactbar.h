@@ -3,6 +3,7 @@
 #include <QFrame>
 #include <QLineEdit>
 #include "libkstwidgets_global.h"
+#include "attachmentbox.h"
 
 namespace KSTWidgets
 {
@@ -12,7 +13,10 @@ namespace KSTWidgets
 	public:
 		ContactBar(QWidget *parent=nullptr);
 	protected:
-		QLineEdit *street;
+		QLineEdit *streetNumber;
+		QLineEdit *streetName;
 		QLineEdit *phone;
+		QLineEdit *email;
+		AttachmentBox *listing;
 	};
 }
